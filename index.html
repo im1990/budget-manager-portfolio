@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+        <title>Budget Manager</title>
+    </head>
+
+    <body>
+
+        <div id="app">
+
+            <!-- TOP（予算表示エリア） -->
+            <div class="top">
+
+                <!-- ログアウトボタン -->
+                <button class="logout">Log Out</button>
+
+                <!-- 予算表示エリア -->
+                <div class="budget">
+
+                    <!-- 現在の年月を表示 -->
+                    <h2 class="budget__title"></h2>
+                    
+                    <!-- 残りの予算を表示 -->
+                    <div class="budget__value">￥0</div>
+                    
+                    <!-- 収入合価を表示 -->
+                    <div class="budget__income clearfix">
+                        <div class="budget__income--text">収入</div>
+                        <div class="right">
+                            <div class="budget__income--value">0</div>
+                            <div class="budget__income--percentage">&nbsp;</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 支出合価を表示 -->
+                    <div class="budget__expenses clearfix">
+                        <div class="budget__expenses--text">支出</div>
+                        <div class="right clearfix">
+                            <div class="budget__expenses--value">- 0</div>
+                            <div class="budget__expenses--percentage">0%</div>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            
+            
+            <!-- Middle（追加エリア） -->
+            <div class="middle">
+                                
+                <div class="add">
+
+                    <div class="add__container">
+
+                        <!-- 費目入力エリア -->
+                        <input type="text" class="add__description" placeholder="費目">
+                        
+                        <!-- + or - 選択エリア -->
+                        <select class="add__type">
+                            <option value="inc" selected>+</option>
+                            <option value="exp">-</option>
+                        </select>
+
+                        <!-- 金額入力エリア -->
+                        <input type="number" class="add__value" placeholder="金額">
+                        
+                        <!-- 追加ボタン -->
+                        <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+                    
+                    </div> 
+
+                </div>
+
+            </div>
+                
+            <!-- Bottom（リスト表示エリア） -->
+            <div class="bottom">    
+
+                <div class="container clearfix">
+
+                    <!-- 収入リスト -->
+                    <div class="income">
+
+                        <h2 class="icome__title"><i class="fas fa-money-bill-wave-alt"></i>収入</h2>
+                        
+                        <!-- 収支リスト表示エリア -->
+                        <div class="income__list">
+                                                    
+                            <!-- 収支リスト（追加要素） -->
+                            <!-- <div class="item clearfix">
+                                <div class="item__description">お給料</div>
+                                <div class="right clearfix">
+                                    <div class="item__value">200,000</div>
+                                    <div class="item__delete">
+                                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                    </div>
+                                </div>
+                            </div>    -->
+
+                        </div>
+                    </div>
+                    
+                    
+                    <!-- 支出リスト -->
+                    <div class="expenses">
+
+                        <h2 class="expenses__title"><i class="fas fa-yen-sign"></i>支出</h2>
+                        
+                        <!-- 支出リスト表示エリア -->
+                        <div class="expenses__list">
+                        
+                            <!-- 支出リスト（追加要素 -->
+                            <!-- <div class="item clearfix">　　　　　　　　　　　　　　    
+                                <button class="shopping__add--btn"><i class="fas fa-shopping-basket"></i></button>                                            
+                                <div class="item__description">生活費</div>　　　　　　
+                                <div class="right clearfix">　　　　　　　　　　　　　　　 
+                                    <div class="item__value">-150,000</div>　　　　　　
+                                    <div class="item__percentage">75%</div>　　　　　　
+                                    <div class="item__delete">　　　　　　
+                                        <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                    </div>
+                                 </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+
+
+                    <!-- 買い物リスト -->
+                    <div class="shopping">
+                        
+                        <h2 class="shopping__title"><i class="fas fa-shopping-cart"></i>買い物リスト</h2>
+                        
+                        <!-- 買い物リスト表示エリア -->
+                        <div class="shopping__list">
+                                    
+                            <!-- <div class="item clearfix">
+                                <input type="checkbox" class="shopping__checkbox">
+                                <label class="shopping__checkbox--label">レタス</label>
+
+                                <div class="item__delete">
+                                    <button class="item__delete--btn">
+                                        <i class="ion-ios-close-outline"></i>
+                                    </button>
+                                </div>
+                            </div> -->
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                
+            </div>
+
+            <footer>&copy; MIKI ISHIBASHI</footer>
+
+        </div>
+
+
+        
+        <script src="https://kit.fontawesome.com/9df5bf1065.js" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
