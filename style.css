@@ -127,7 +127,8 @@ i {
 }
 
 .budget__expenses--percentage {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.2); /* => for modern browsers only */
     text-align: center;
     border-radius: 3px;
 }
@@ -223,7 +224,7 @@ i {
 
 .container {
     width: 95%;
-    margin: 0% auto;
+    margin: 0 auto;
 }
 
 .income, .expenses, .shopping {
@@ -458,7 +459,7 @@ footer {
 
     .container {
         margin: 5% auto;
-        width: 40%;
+        width: 60%;
     }
 
     .income, .expenses, .shopping {
@@ -489,7 +490,7 @@ footer {
 
     .container {
         margin: 5% auto;
-        width: 60%;
+        width: 70%;
     }
 
     .income, .expenses, .shopping {

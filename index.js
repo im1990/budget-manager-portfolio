@@ -87,7 +87,7 @@ const calcPercentage = function() {
     const budgetExpensesValue = document.querySelector('.budget__expenses--value');
     const budgetExpensesPercentage = document.querySelector('.budget__expenses--percentage');
 
-    if(income.length === 0 || expenses.length === 0 ) {
+    if(!income.length || !expenses.length) {
         budgetExpensesPercentage.textContent = '0%';
 
     } else {
@@ -288,7 +288,7 @@ const createIncomeList = function(type) {
 //</div>
 //----------------------------------------------------------
 
-function createExpenseList(type) {
+const createExpenseList = function(type) {
 
     // 支出リスト表示エリアのDOMを取得
     const expensesList = document.querySelector('.expenses__list');
